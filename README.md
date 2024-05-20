@@ -17,3 +17,10 @@ kubectl edit deployment metrics-server -n kube-system
 kubectl top pods
 sudo systemctl restart kubelet
 ```
+
+# For traffic gen 
+
+```bash
+apk add ark
+then go inside the pod and execute this : wrk -t12 -c400 -d30s http://<service-name>:8080/index.html
+```
