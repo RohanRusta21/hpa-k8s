@@ -24,3 +24,11 @@ sudo systemctl restart kubelet
 apk add ark
 then go inside the pod and execute this : wrk -t12 -c400 -d30s http://<service-name>:8080/index.html
 ```
+
+# For VPA
+
+```bash
+git clone https://github.com/kubernetes/autoscaler.git
+cd autoscaler/vertical-pod-autoscaler/hack
+./vpa-up.sh
+```
